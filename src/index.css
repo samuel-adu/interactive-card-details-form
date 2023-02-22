@@ -29,6 +29,7 @@ body {
   color: var(--clr-primary-700);
   background-image: url(./assets/images/bg-main-mobile.png);
   background-repeat: no-repeat;
+  background-size: 100% 30%;
 }
 
 img {
