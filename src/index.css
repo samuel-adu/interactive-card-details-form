@@ -39,7 +39,17 @@ img {
 
 /* typography */
 p {
+  margin-bottom: 1em;
+}
+
+.complete-heading {
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin-bottom: 0.5em;
+}
+
+.complete-msg {
+  color: var(--clr-primary-500);
 }
 
 /* layout */
@@ -144,7 +154,7 @@ input:focus {
   outline: 1px solid var(--clr-primary-700);
 }
 
-button {
+.btn {
   padding: 1em;
   width: 100%;
   display: inline-block;
@@ -155,6 +165,8 @@ button {
   background-color: var(--clr-primary-700);
   color: var(--clr-neutral);
   cursor: pointer;
+  text-transform: capitalize;
+  margin-block: 1em;
 }
 
 .form-control {
@@ -166,6 +178,15 @@ button {
   width: 50%;
 }
 
+.complete-state {
+  padding: 2em;
+  text-align: center;
+}
+
+.complete-icon {
+  margin: 1em auto;
+}
+
 @media screen and (min-width: 569px) {
   body {
     background-image: url(./assets/images/bg-main-desktop.png);
@@ -175,7 +196,7 @@ button {
   .main {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 5em;
     min-height: 100vh;
   }
 
