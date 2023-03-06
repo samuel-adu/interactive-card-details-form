@@ -214,7 +214,6 @@ input.error {
   .card-preview {
     flex-direction: column-reverse;
     width: 40%;
-    /* margin-right: 5em; */
   }
 
   .card-form {
@@ -227,13 +226,13 @@ input.error {
     padding: 2em;
   }
 
-  /* .card-front {
-    margin-left: 15%;
-  } */
+  .card-front {
+    margin-inline: 0 auto;
+  }
 
-  /* .card-back {
-    margin-left: 30%;
-  } */
+  .card-back {
+    margin-inline: auto 5%;
+  }
 
   .card-logo {
     width: 80px;
