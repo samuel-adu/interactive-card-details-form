@@ -38,6 +38,7 @@ img {
 }
 
 /* typography */
+
 p {
   margin-bottom: 1em;
 }
@@ -122,7 +123,7 @@ form {
   font-family: var(--ff-primary);
   font-size: 1rem;
   padding: 2em;
-  /* width: 375px; */
+  max-width: 450px;
 }
 
 ::placeholder {
@@ -199,7 +200,7 @@ input.error {
 @media screen and (min-width: 569px) {
   body {
     background-image: url(./assets/images/bg-main-desktop.png);
-    background-size: 25% 100vh;
+    background-size: 33.33% 100vh;
   }
 
   .main {
@@ -207,11 +208,13 @@ input.error {
     align-items: center;
     gap: 5em;
     min-height: 100vh;
+    justify-content: center;
   }
 
   .card-preview {
     flex-direction: column-reverse;
     width: 40%;
+    /* margin-right: 5em; */
   }
 
   .card-form {
@@ -224,13 +227,13 @@ input.error {
     padding: 2em;
   }
 
-  .card-front {
+  /* .card-front {
     margin-left: 15%;
-  }
+  } */
 
-  .card-back {
+  /* .card-back {
     margin-left: 30%;
-  }
+  } */
 
   .card-logo {
     width: 80px;
