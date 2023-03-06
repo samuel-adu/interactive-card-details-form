@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <div className="main">
+      <main className="main">
         <div className="card-preview">
           <div className="card card-back">
             <p className="card-cvc">{watch("cvc") || "000"}</p>
@@ -100,7 +100,7 @@ function App() {
 
           <div className="form-control">
             <div>
-              <label htmlFor="">Exp. Date (MM/YY)</label>
+              <label>Exp. Date (MM/YY)</label>
               <div className="form-control">
                 <input
                   {...register("expMonth", { required: "can't be blank" })}
@@ -139,7 +139,7 @@ function App() {
             Confirm
           </button>
         </form>
-      </div>
+      </main>
     </>
   );
 }
