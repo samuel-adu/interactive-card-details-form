@@ -34,7 +34,6 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop view](./screenshot-desktop.png)
-![Mobile view](./screenshot-mobile.png)
 
 ### Links
 
