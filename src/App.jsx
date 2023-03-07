@@ -62,8 +62,10 @@ function App() {
             id="card-details-form"
             className="form"
           >
-            <div>
-              <label htmlFor="cardHolderName">Cardholder Name</label>
+            <div className="form-control">
+              <label className="form-label" htmlFor="cardHolderName">
+                Cardholder Name
+              </label>
               <input
                 type="text"
                 id="cardHolderName"
@@ -75,8 +77,10 @@ function App() {
               )}
             </div>
 
-            <div>
-              <label htmlFor="cardNumber">Card Number</label>
+            <div className="form-control">
+              <label className="form-label" htmlFor="cardNumber">
+                Card Number
+              </label>
               <input
                 type="text"
                 id="cardNumber"
@@ -86,11 +90,11 @@ function App() {
                   required: "can't be blank",
                   pattern: {
                     value: /^[0-9]+$/,
-                    message: "numbers only",
+                    message: "wrong format, numbers only",
                   },
                   minLength: {
                     value: 16,
-                    message: "Card number must be 16 digits",
+                    message: "16 digits required",
                   },
                 })}
               />
@@ -99,10 +103,10 @@ function App() {
               )}
             </div>
 
-            <div className="form-control">
-              <div>
-                <label>Exp. Date (MM/YY)</label>
-                <div className="form-control">
+            <div className="flex">
+              <div className="form-control">
+                <label className="form-label">Exp. Date (MM/YY)</label>
+                <div className="flex">
                   <input
                     type="text"
                     id="expMonth"
@@ -113,6 +117,10 @@ function App() {
                       pattern: {
                         value: /^[0-9]+$/,
                         message: "numbers only",
+                      },
+                      minLength: {
+                        value: 2,
+                        message: "2 digits required",
                       },
                     })}
                   />
@@ -127,16 +135,26 @@ function App() {
                         value: /^[0-9]+$/,
                         message: "numbers only",
                       },
+                      minLength: {
+                        value: 2,
+                        message: "2 digits required",
+                      },
                     })}
                   />
                 </div>
-                {errors.expMonth && (
+                {errors.expMonth ? (
                   <p className="error-msg">{errors.expMonth.message}</p>
+                ) : errors.expYear ? (
+                  <p className="error-msg">{errors.expYear.message}</p>
+                ) : (
+                  ""
                 )}
               </div>
 
-              <div>
-                <label htmlFor="cvc">CVC</label>
+              <div className="form-control">
+                <label className="form-label" htmlFor="cvc">
+                  CVC
+                </label>
                 <input
                   type="text"
                   id="cvc"
@@ -147,6 +165,10 @@ function App() {
                     pattern: {
                       value: /^[0-9]+$/,
                       message: "numbers only",
+                    },
+                    minLength: {
+                      value: 3,
+                      message: "3 digits required",
                     },
                   })}
                 />
