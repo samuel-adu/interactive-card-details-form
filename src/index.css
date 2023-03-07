@@ -149,10 +149,11 @@ input {
   border: 1px solid var(--clr-primary-400);
   margin-bottom: 0.5em;
   cursor: pointer;
+  outline: none;
 }
 
 input:focus {
-  outline: 1px solid var(--clr-primary-700);
+  border: 1px solid var(--clr-primary-700);
 }
 
 input.error {
@@ -174,13 +175,18 @@ input.error {
   margin-block: 1em;
 }
 
-.form-control {
+.flex {
   display: flex;
   gap: 0.5em;
 }
 
-.form-control > div {
+.flex > div {
   width: 50%;
+}
+
+.form-control {
+  padding-bottom: 1em;
+  position: relative;
 }
 
 .complete-state {
@@ -195,6 +201,7 @@ input.error {
 .error-msg {
   color: var(--clr-accent);
   font-size: 0.65em;
+  position: absolute;
 }
 
 @media screen and (min-width: 569px) {
